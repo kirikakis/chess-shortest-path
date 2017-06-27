@@ -33,11 +33,11 @@ $ chess-shortest-path
 ![chess-ui](chess-ui.png)
 
 ## Build and Run with Gradle
+#### CLI
 `
 $ gradle build run -Dexec.args="-start E1 -end A7"
 `
-
-### Result
+##### Result
 ```
 :compileJava
 :compileGroovy UP-TO-DATE
@@ -46,5 +46,8 @@ $ gradle build run -Dexec.args="-start E1 -end A7"
 :run
 C2 A3 B5 A7
 ```
-
+#### UI
+`
+$ gradle build run
+`
 
