@@ -2,7 +2,7 @@
 
 Using [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search) algorithm to calculate the shortest path between a given starting position and end position on a chess board.
 
-Right now this is just for a Knight but thanks to its open architecture can easily extended to other pieces using the ChessPiece interface as well as to multiple dimensions and algorithms.
+Right now this is just for a Knight but thanks to its open architecture can easily extend to other pieces using the ChessPiece interface as well as to multiple dimensions and algorithms.
 
 
 ## prerequisites
