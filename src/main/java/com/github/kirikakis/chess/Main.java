@@ -17,12 +17,14 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    private final int maxMoves = 3;
+    private int maxMoves = 3;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
 
         ShortestPathInterface shortestPathAlgorithm = new BreadthFirstAlgorithm();
+
+        boolean argsPassed = true;
 
         if(!getParameters().getRaw().isEmpty()) {
             ChessArgs chessArgs = new ChessArgs();
@@ -31,7 +33,7 @@ public class Main extends Application {
             List<String> args = getParameters().getUnnamed();
             commander.parse(args.toArray(new String[args.size()]));
 
-            boolean argsPassed = true;
+            this.maxMoves = chessArgs.maxMoves;
 
             if (chessArgs.startPosition == null) {
                 System.err.println("Must include start position\r\n");
@@ -51,9 +53,9 @@ public class Main extends Application {
                                                     new ChessCoordinate(chessArgs.endPosition),
                                                     new Knight()).size() > maxMoves) {
                     System.out.println("Moves needed are more than " + this.maxMoves);
-                    System.exit(0);
                 }
             }
+            System.exit(0);
         }
         else {
             FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("chess.fxml"));
