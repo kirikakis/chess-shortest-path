@@ -1,12 +1,9 @@
-# chess-shortest-path
+# Chess Shortest Path
 
-Search to find the shortest path between a given starting position and end position on a chess board.
+Using [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search) algorithm to calculate the shortest path between a given starting position and end position on a chess board.
 
-Right now this is just for a Knight but can easily extended to other pieces using the ChessPiece interface.
+Right now this is just for a Knight but thanks to its open architecture can easily extended to other pieces using the ChessPiece interface as well as to multiple dimensions and algorithms.
 
-Outputs shortest path moves a Knight should take from the starting position provided up to the end position within given moves range.
-
-Using [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search) algorithm, open architecture so can be replaced with another algorithm.
 
 ## prerequisites
 * Gradle
@@ -28,7 +25,9 @@ Positions are in algebraic chess notation
 ## Run with UI
 ```
 $ cd build/install/chess-shortest-path/bin
-$ chess-shortest-path
+$ ./chess-shortest-path
+or
+$ ./chess-shortest-path -maxMoves 3
 ```
 ![chess-ui](chess-ui.png)
 

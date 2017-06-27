@@ -24,28 +24,34 @@ public class Main extends Application {
 
         ShortestPathInterface shortestPathAlgorithm = new BreadthFirstAlgorithm();
 
-        boolean argsPassed = true;
+        ChessArgs chessArgs = new ChessArgs();
 
-        if(!getParameters().getRaw().isEmpty()) {
-            ChessArgs chessArgs = new ChessArgs();
-            JCommander commander = JCommander.newBuilder().addObject(chessArgs).build();
-            commander.setProgramName("chess-shortest-path");
-            List<String> args = getParameters().getUnnamed();
+        JCommander commander = JCommander.newBuilder().addObject(chessArgs).build();
+        commander.setProgramName("chess-shortest-path");
+        boolean positionArgsPassed = true;
+
+        List<String> args = getParameters().getUnnamed();
+        if(!args.isEmpty()) {
             commander.parse(args.toArray(new String[args.size()]));
-
             this.maxMoves = chessArgs.maxMoves;
+            if(chessArgs.help){
+                commander.usage();
+                System.exit(0);
+            }
+        }
+        if(args.size() > 2) {
 
             if (chessArgs.startPosition == null) {
                 System.err.println("Must include start position\r\n");
-                argsPassed = false;
+                positionArgsPassed = false;
             }
 
             if (chessArgs.endPosition == null) {
                 System.err.println("Must include end position\r\n");
-                argsPassed = false;
+                positionArgsPassed = false;
             }
 
-            if (!argsPassed) {
+            if (!positionArgsPassed) {
                 commander.usage();
             }
             else {

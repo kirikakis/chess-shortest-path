@@ -7,7 +7,7 @@ import com.beust.jcommander.Parameter;
 public class ChessArgs {
 
     @Parameter(names = "-help", help = true, order = 0, hidden = true)
-    public boolean help;
+    public boolean help = false;
 
     @Parameter(names = "-start", description = "Start Position e.g. A1,B2,C3...", order = 1)
     public String startPosition;
