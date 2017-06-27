@@ -29,7 +29,7 @@ $ ./chess-shortest-path
 or
 $ ./chess-shortest-path -maxMoves 3
 ```
-![chess-ui](chess-ui.png =500x)
+<img src="chess-ui.png" alt="chess-ui" style="width: 600px;"/>
 
 ## Build and Run with Gradle
 #### CLI
