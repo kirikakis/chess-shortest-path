@@ -3,6 +3,8 @@ group 'com.github.kirikakis.chess.shortest.path'
 apply plugin:'java'
 apply plugin:'base'
 apply plugin:'application'
+apply plugin: 'groovy'
+apply plugin: 'idea'
 
 sourceCompatibility = '1.8'
 
