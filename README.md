@@ -6,7 +6,6 @@ Right now this is just for a Knight but thanks to its open architecture can easi
 
 
 ## prerequisites
-* Gradle
 * Java 1.8
 
 ## Build and Deploy
