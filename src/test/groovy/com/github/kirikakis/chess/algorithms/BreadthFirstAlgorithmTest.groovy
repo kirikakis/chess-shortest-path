@@ -23,8 +23,8 @@ class BreadthFirstAlgorithmTest extends Specification {
 
         expect:
         breadthFirstAlgorithm.shortestPath( new ChessCoordinate("E1"),
-                new ChessCoordinate("A7"),
-                new Knight()) == expectedShortestPath
+                                            new ChessCoordinate("A7"),
+                                            new Knight()) == expectedShortestPath
     }
 
     def "BreadthFirstAlgorithm E2 B5"() {
